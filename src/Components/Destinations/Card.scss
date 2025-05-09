@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&display=swap');
+
+/* All project colors */
+:root {
+    --primaryColor: hsl(14, 90%, 53%);
+    --primaryColorLight: hsl(14, 96%, 91%);
+    --bgColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%, 87%);
+    --whiteColor: hsl(100, 100%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --greyText: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+.Card {
+    padding-top: 8rem;
+    position: relative;
+
+    .videoContainer {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .textOverlay {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.737);
+        z-index: 2;
+
+        p {
+            font-size: 6rem;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.structure {
+    .MapAPI {
+        float: right;
+        width: 550px;
+        height: 350px;
+        background-color: skyblue;
+    }
+
+    .details {
+        float: left;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 976px;
+
+        #button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px auto;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid var(--primaryColor);
+            color: var(--primaryColor);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: var(--primaryColorLight);
+                color: white;
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            width: 25%;
+            padding: 10px;
+        }
+    }
+}
+
+/* Progress Bar Container */
+/* Base Progress Bar Style */
+.progressbar {
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  /* Progress Bar Fill */
+  .progressbarfill {
+    height: 100%;
+    border-radius: 50px;
+    transition: width 0.5s ease-out;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Conditional Colors based on Progress Percentage */
+  .progressbarfill {
+    background-color: var(--primaryColor); /* Default color, use your desired color */
+  }
+  
+  .progressbarfill.below30 {
+    background-color: red; /* Change to red if below 30% */
+  }
+  
+  .progressbarfill.between30and70 {
+    background-color: orange; /* Change to orange if between 30% and 70% */
+  }
+  
+  .progressbarfill.above70 {
+    background-color: green; /* Change to green if above 70% */
+  }
+
+
+
+  .places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .place-item {
+    width: calc(50% - 20px);
+    height: 500px; /* Set a fixed height for the container */
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .place-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .place-item img {
+    width: 100%;
+    height: 110%; /* Increase the height a little */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .place-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .place-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .place-item:hover .place-description,
+  .place-item:hover img {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
+
+/* Optional: Add hover effect */
+//.progressbar:hover .progressbarfill {
+   // background-color: var(--primaryColorLight); /* Use your desired hover color */
+    //color: #000;
+//}
